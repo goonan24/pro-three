@@ -27,7 +27,8 @@ export class TvChannel extends LitElement {
       }
       .wrapper {
         padding: 16px;
-        background-color: #eeeeee;
+        width: 200px;
+        background-color: whitesmoke;
       }
     `;
   }

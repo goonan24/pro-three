@@ -9,52 +9,171 @@
     "metadata": {},
     "items": [
       {
-        "id": "item-1",
+        "id": "item-introduction",
         "indent": 0,
-        "location": "hax-wp-killer.html",
-        "slug": "hax-wp-killer",
+        "location": "pageone.html",
+        "slug": "introduction",
         "order": 0,
         "parent": null,
-        "title": "HAX: Wordpress Killer",
-        "description": "The future we need, not the future we have.",
+        "title": "1: Introduction",
+        "description": "Lets gets started",
         "metadata": {
           "source": "https://www.youtube.com/watch?v=9MT-BNuUCpM",
           "timecode": 0,
-          "author":"Bryan Ollendyke",
+          "author":"",
           "created": 1697033522,
           "updated": 1697034021
         }
       },
       {
-        "id": "item-3421",
+        "id": "item-Getting-set-up",
         "indent": 0,
-        "location": "hax-wp-killer.html",
-        "slug": "hax-wp-killer",
+        "location": "pagetwo.html",
+        "slug": "Getting-set-up",
         "order": 0,
         "parent": null,
-        "title": "HAX: sdffs sdsffsf",
-        "description": "The future we need, not the future we have.",
-        "metadata": {
-          "source": "https://www.youtube.com/watch?v=9MT-BNuUCpM",
-          "timecode": 0,
-          "author":"Bryan Ollendyke",
-          "created": 1697033522,
-          "updated": 1697034021
-        }
-      },
-      {
-        "id": "item-2",
-        "indent": 0,
-        "location": "this-is-water.html",
-        "slug": "this-is-water",
-        "order": 0,
-        "parent": null,
-        "title": "This, is water",
-        "description": "What is water?",
+        "title": "2: Geting set up & exploring the Playground",
+        "description": "What is what",
         "metadata": {
           "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
           "timecode": 45,
-          "author":"David Foster Wallace",
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-Define-a-custome-Element",
+        "indent": 0,
+        "location": "pagethree.html",
+        "slug": "Define-a-custome-Element",
+        "order": 0,
+        "parent": null,
+        "title": "3: Define A Custom Element",
+        "description": "What is a Custom Element",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-Shadow-DOM",
+        "indent": 0,
+        "location": "pagefour.html",
+        "slug": "Shadow-DOM",
+        "order": 0,
+        "parent": null,
+        "title": "4: Shadow DOM",
+        "description": "Why Shadow DOM?",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-HTML-templates",
+        "indent": 0,
+        "location": "pagefive.html",
+        "slug": "HTML-templates",
+        "order": 0,
+        "parent": null,
+        "title": "5: HTML Templates",
+        "description": "the use of HTML templates",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-Adding-functionality",
+        "indent": 0,
+        "location": "pagesix.html",
+        "slug": "Adding-functionality",
+        "order": 0,
+        "parent": null,
+        "title": "6: Adding Functionality",
+        "description": "lets gets functional",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-Lit-html",
+        "indent": 0,
+        "location": "pageseven",
+        "slug": "Lit-html",
+        "order": 0,
+        "parent": null,
+        "title": "7: Lit-html",
+        "description": "Why lit-html",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-Lit-Element",
+        "indent": 0,
+        "location": "pageeight.html",
+        "slug": "Lit-Element",
+        "order": 0,
+        "parent": null,
+        "title": "8: LitElement",
+        "description": "Why LitElement",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-congratulations",
+        "indent": 0,
+        "location": "pagenine.html",
+        "slug": "congratulations",
+        "order": 0,
+        "parent": null,
+        "title": "9: Congratulations",
+        "description": "lets go, you made it to the end",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "timecode": 45,
+          "author":" ",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-cyber-security-in-the-army",
+        "indent": 0,
+        "location": "pageten.html",
+        "slug": "cyber-security-in-the-army",
+        "order": 0,
+        "parent": null,
+        "title": "10: Cyber Security in the Army",
+        "description": "how can you serve your country using these skills",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=-1QSq11T0CM&ab_channel=U.S.ArmyTalentManagement",
+          "timecode": 45,
+          "author":" ",
           "created": 1697033522,
           "updated": 1697034021
         }

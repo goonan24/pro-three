@@ -10,7 +10,7 @@ export class TvApp extends LitElement {
     super();
     this.name = '';
     this.source = new URL('../assets/channels.json', import.meta.url).href;
-    this.listings = [];
+    this.listings = []
     this.activeItem = {
       title: null,
       id: null,
@@ -38,6 +38,15 @@ export class TvApp extends LitElement {
         display: block;
         margin: 16px;
         padding: 16px;
+        color: blue;
+        background-color: gray;
+        width: 1000px;
+      }
+      .dialog{
+        top: 1px;
+        color: red;
+        margin-left: 500px;
+        
       }
       `
     ];
