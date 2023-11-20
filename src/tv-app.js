@@ -14,8 +14,10 @@ export class TvApp extends LitElement {
     this.activeItem = {
       title: null,
       id: null,
-      description: null,
+      description: null
     };
+    //this.page = new URL('../assets/pages'. import.meta.url).href;
+
   }
   // convention I enjoy using to define the tag's name
   static get tag() {
@@ -27,7 +29,8 @@ export class TvApp extends LitElement {
       name: { type: String },
       source: { type: String },
       listings: { type: Array },
-      activeItem: { type: Object }
+      activeItem: { type: Object },
+      page: {type: Object}
     };
   }
   // LitElement convention for applying styles JUST to our element
@@ -48,6 +51,11 @@ export class TvApp extends LitElement {
         margin-left: 500px;
         
       }
+      .holder{
+        display: block;
+        position: absolute;
+        top: 1px;
+      }
       `
     ];
   }
@@ -55,6 +63,7 @@ export class TvApp extends LitElement {
   render() {
     return html`
       <h2>${this.name}</h2>
+      
       ${
         this.listings.map(
           (item) => html`
@@ -72,14 +81,16 @@ export class TvApp extends LitElement {
       <div>
       ${this.activeItem.name}
       ${this.activeItem.description}
-        <!-- video -->
+        <!-- video --> ${this.activeItem.source}
         <!-- discord / chat - optional -->
       </div>
       <!-- dialog -->
-      <sl-dialog label="Dialog" class="dialog">
-      ${this.activeItem.title}
-        <sl-button slot="footer" variant="primary" @click="${this.closeDialog}">Close</sl-button>
-      </sl-dialog>
+      <div class = holder>
+        <sl-dialog label="Dialog" class="dialog">
+        ${this.activeItem.title}
+          <sl-button slot="footer" variant="primary" @click="${this.closeDialog}">Next</sl-button>
+        </sl-dialog>
+      </div>
     `;
   }
 
