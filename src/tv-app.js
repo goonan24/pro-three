@@ -1,7 +1,6 @@
 // import stuff
 import { LitElement, html, css } from "lit";
 import "./tv-channel.js";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import "./top-bar.js";
 
 export class TvApp extends LitElement {
@@ -171,8 +170,7 @@ export class TvApp extends LitElement {
         </div>
 
         <div class="main">
-          <!-- ternary operator to check if the active content is null or not -->
-          ${this.activeContent ? unsafeHTML(this.activeContent) : html``}
+          <slot> ${this.activeContent} </slot>
         </div>
 
         <div class="fabs">

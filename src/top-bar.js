@@ -1,12 +1,8 @@
 import { LitElement, html, css } from "lit";
 import "@shoelace-style/shoelace/dist/shoelace.js";
 
-
-
-
-
 export class TopBar extends LitElement {
-  // defaults
+  
   constructor() {
     super();
     this.title = "";
@@ -15,11 +11,9 @@ export class TopBar extends LitElement {
     this.time = "";
    
   }
-  // convention I enjoy using to define the tag's name
   static get tag() {
     return "top-bar";
   }
-  // LitElement convention so we update render() when values change
   static get properties() {
     return {
       title: { type: String },
@@ -28,7 +22,7 @@ export class TopBar extends LitElement {
       time: { type: String },
     };
   }
-  // LitElement convention for applying styles JUST to our element
+ 
   static get styles() {
     return css`
       :host {
@@ -90,7 +84,7 @@ export class TopBar extends LitElement {
       }
     `;
   }
-  // LitElement rendering template of your element
+
   render() {
     return html`
       <div id="codelab-title">
@@ -138,14 +132,11 @@ export class TopBar extends LitElement {
   <div class="" id="gb">
     <div class="" ng-non-bindable="" data-ogsr-up="" style="padding:0;height:auto;display:block">
       <div class="" style="display:block">
-        <div class=""></div>
-        <div class="">
           <div class="">
             <a class="" aria-label="Google Account: Joseph Goonan (jgoonan24@gmail.com)" href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/webhp%3Fauthuser%3D2&ec=GBRAmgQ" role="button" tabindex="0" id="devsite-signin-btn">
               <img class="" style = "border-radius: 33px" href ="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/webhp%3Fauthuser%3D2&ec=GBRAmgQ" srcset="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/webhp%3Fauthuser%3D2&ec=GBRAmgQ" alt="" aria-hidden="true" data-noaft="">
             </a>
           </div>
-        </div>
       </div>
     </div>
   </div>
