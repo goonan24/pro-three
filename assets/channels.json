@@ -18,7 +18,7 @@
         "title": "1: Introduction",
         "description": "Lets gets started",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=9MT-BNuUCpM",
+          "source": "pageone.html",
           "timecode": 0,
           "author":"",
           "created": 1697033522,
@@ -35,7 +35,7 @@
         "title": "2: Geting set up & exploring the Playground",
         "description": "What is what",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pagetwo.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -52,7 +52,7 @@
         "title": "3: Define A Custom Element",
         "description": "What is a Custom Element",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pagethree.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -69,7 +69,7 @@
         "title": "4: Shadow DOM",
         "description": "Why Shadow DOM?",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pagefour.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -86,7 +86,7 @@
         "title": "5: HTML Templates",
         "description": "the use of HTML templates",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pagefive.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -103,7 +103,7 @@
         "title": "6: Adding Functionality",
         "description": "lets gets functional",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pagesix.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -120,7 +120,7 @@
         "title": "7: Lit-html",
         "description": "Why lit-html",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pageseven.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -137,7 +137,7 @@
         "title": "8: LitElement",
         "description": "Why LitElement",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pageeight.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -154,7 +154,7 @@
         "title": "9: Congratulations",
         "description": "lets go, you made it to the end",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
+          "source": "pagenine.html",
           "timecode": 45,
           "author":" ",
           "created": 1697033522,
@@ -171,9 +171,9 @@
         "title": "10: Cyber Security in the Army",
         "description": "pageten.html",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=-1QSq11T0CM&ab_channel=U.S.ArmyTalentManagement",
+          "source": "pageten.html",
           "timecode": 45,
-          "author":" ",
+          "author":"Joseph Goonan",
           "created": 1697033522,
           "updated": 1697034021
         }
