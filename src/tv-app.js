@@ -36,7 +36,7 @@ export class TvApp extends LitElement {
       id: { type: String },
       activeIndex: { type: Number },
       activeContent: { type: String },
-      // time: { type: String },
+      //time: { type: String },
     };
   }
   // LitElement convention for applying styles JUST to our element
@@ -215,7 +215,7 @@ export class TvApp extends LitElement {
       try {
         const response = await fetch(contentPath);
         this.activeContent = await response.text();
-        // console.log("Active Content", this.activeContent);
+        //console.log("Active Content", this.activeContent);
         this.activeIndex = prevIndex; // Update the active index after fetching content
       } catch (err) {
         console.log("fetch failed", err);
@@ -225,30 +225,30 @@ export class TvApp extends LitElement {
 
   // Funtion to fetch for the content that is being clicked
   async itemClick(index) {
-    this.activeIndex = index; // Update the active index after fetching content
-    // console.log("Active Index: ", this.activeIndex);
+    this.activeIndex = index; 
+    //console.log("Active Index: ", this.activeIndex);
 
-    const item = this.listings[index].location; // Get the location of the content
-    // console.log("Active Content: ", item);
+    const item = this.listings[index].location; 
+    //console.log("Active Content: ", item);
 
-    this.time = this.listings[index].metadata.timecode; // Get the timecode of the content
-    // console.log("Time: ", this.time);
+    this.time = this.listings[index].metadata.timecode; 
+    //console.log("Time: ", this.time);
 
     const contentPath = "/assets/" + item;
 
-    // add the path to fetch for the content that presist in our assets folder
+    
     try {
       const response = await fetch(contentPath);
       // console.log("Response: ", response);
       const text = await response.text();
       // console.log("Text: ", text);
-      this.activeContent = text; // Update the active content after fetching
+      this.activeContent = text; 
     } catch (err) {
       console.log("fetch failed", err);
     }
   }
 
-  // LitElement life cycle for when any property changes
+
   updated(changedProperties) {
     if (super.updated) {
       super.updated(changedProperties);
@@ -260,7 +260,7 @@ export class TvApp extends LitElement {
     });
   }
 
-  // API fetches the JSON file and updates the listings array
+ 
   async updateSourceData(source) {
     await fetch(source)
       .then((resp) => (resp.ok ? resp.json() : []))
@@ -270,7 +270,7 @@ export class TvApp extends LitElement {
           responseData.data.items &&
           responseData.data.items.length > 0
         ) {
-          this.listings = [...responseData.data.items]; // Spread operator to clone the array
+          this.listings = [...responseData.data.items]; 
           console.log("Listings: ", this.listings);
         }
       });
