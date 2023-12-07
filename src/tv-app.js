@@ -244,7 +244,7 @@ export class TvApp extends LitElement {
      //  console.log("Text: ", text);
       this.activeContent = text; 
     } catch (err) {
-      //console.log("fetch failed", err);
+      console.log("fetch failed", err);
     }
   }
 

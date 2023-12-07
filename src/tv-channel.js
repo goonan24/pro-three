@@ -12,7 +12,7 @@ export class TvChannel extends LitElement {
   static get tag() {
     return "tv-channel";
   }
-  // LitElement convention so we update render() when values change
+
   static get properties() {
     return {
       title: { type: String },
@@ -21,7 +21,6 @@ export class TvChannel extends LitElement {
     };
   }
 
-  // LitElement convention for applying styles JUST to our element
   static get styles() {
     return css`
       :host {
@@ -64,7 +63,7 @@ export class TvChannel extends LitElement {
         color: white;
       }
 
-      .dot {
+      .circle {
         height: 25px;
         width: 25px;
         background-color: rgb(128 134 140);
@@ -86,7 +85,7 @@ export class TvChannel extends LitElement {
   updated(changedProperties) {
     // Course progression
     if (changedProperties.has("activeIndex") && this.activeIndex !== null) {
-      const dot = this.shadowRoot.querySelector(".dot");
+      const circle = this.shadowRoot.querySelector(".circle");
       const id = this.shadowRoot.querySelector("#title");
 
       if (parseInt(this.id) - 1 === this.activeIndex) {
@@ -96,10 +95,10 @@ export class TvChannel extends LitElement {
       }
 
       if (parseInt(this.id) - 1 <= this.activeIndex) {
-        dot.style.backgroundColor = "#1a73e8";
+        circle.style.backgroundColor = "#1a73e8";
         id.style.color = "black";
       } else {
-        dot.style.backgroundColor = "rgb(128, 134, 140)";
+        circle.style.backgroundColor = "rgb(128, 134, 140)";
         id.style.color = "";
       }
     }
@@ -109,7 +108,7 @@ export class TvChannel extends LitElement {
   render() {
     return html`
       <div class="wrapper">
-        <span class="dot">
+        <span class="circle">
           <h2>${this.id}</h2>
         </span>
         <span id="title">${this.title}</span>
