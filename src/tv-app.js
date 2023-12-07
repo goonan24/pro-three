@@ -36,7 +36,7 @@ export class TvApp extends LitElement {
       id: { type: String },
       activeIndex: { type: Number },
       activeContent: { type: String },
-      //time: { type: String },
+      time: { type: String },
     };
   }
   // LitElement convention for applying styles JUST to our element
@@ -239,12 +239,12 @@ export class TvApp extends LitElement {
     
     try {
       const response = await fetch(contentPath);
-      // console.log("Response: ", response);
+     //  console.log("Response: ", response);
       const text = await response.text();
-      // console.log("Text: ", text);
+     //  console.log("Text: ", text);
       this.activeContent = text; 
     } catch (err) {
-      console.log("fetch failed", err);
+      //console.log("fetch failed", err);
     }
   }
 

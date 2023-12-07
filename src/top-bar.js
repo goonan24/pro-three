@@ -95,7 +95,7 @@ export class TopBar extends LitElement {
           >
         </h1>
     
-        <sl-icon class="stopwatch" style="margin-right:3px; font-size:20px; " name="stopwatch"></sl-icon>
+        <sl-icon class="countdown" style="margin-right:3px; font-size:20px; " name="countdown"></sl-icon>
         <div class="codelab-time-container">
 
           <div
@@ -134,7 +134,7 @@ export class TopBar extends LitElement {
       <div class="" style="display:block">
           <div class="">
             <a class="" aria-label="Google Account: Joseph Goonan (jgoonan24@gmail.com)" href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/webhp%3Fauthuser%3D2&ec=GBRAmgQ" role="button" tabindex="0" id="devsite-signin-btn">
-              <img class="" style = "border-radius: 33px" href ="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/webhp%3Fauthuser%3D2&ec=GBRAmgQ" srcset="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/webhp%3Fauthuser%3D2&ec=GBRAmgQ" alt="" aria-hidden="true" data-noaft="">
+              <img class="" style = "border-radius: 33px" href="https://lh3.googleusercontent.com/ogw/ANLem4YLA7gnWFhmSLv6_P5jUOYIZ42Pvit_VwuNgqMB=s32-c-mo" srcset="https://lh3.googleusercontent.com/ogw/ANLem4YLA7gnWFhmSLv6_P5jUOYIZ42Pvit_VwuNgqMB=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/ANLem4YLA7gnWFhmSLv6_P5jUOYIZ42Pvit_VwuNgqMB=s64-c-mo 2x " alt="" aria-hidden="true" data-noaft="">
             </a>
           </div>
       </div>
