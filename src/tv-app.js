@@ -14,18 +14,20 @@ export class TvApp extends LitElement {
     this.activeContent = ""; 
     this.itemClick = this.itemClick.bind(this); 
     this.time = ""; 
+    this.farthestIndex = 0; 
   }
 
-  // LitElement life cycle for when the element is added to the DOM
+
   connectedCallback() {
-    super.connectedCallback(); // helps in setting up the initial state of the component
+    super.connectedCallback(); 
+    this.loadInfo();
+    this.contentLoader();
   }
 
   static get tag() {
     return "tv-app";
   }
 
-  // LitElement convention so we update render() when values change
   static get properties() {
     return {
       name: { type: String },
@@ -39,7 +41,7 @@ export class TvApp extends LitElement {
       time: { type: String },
     };
   }
-  // LitElement convention for applying styles JUST to our element
+  
   static get styles() {
     return [
       css`
@@ -88,7 +90,7 @@ export class TvApp extends LitElement {
           background: #f8f9fa;
         }
 
-        .fabs {
+        .clickers {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -99,7 +101,7 @@ export class TvApp extends LitElement {
           width: 81vw;
         }
 
-        #previous > button {
+        #back > button {
           border-radius: 4px;
           font-family:
             Google Sans,
@@ -152,6 +154,8 @@ export class TvApp extends LitElement {
   }
 
   render() {
+    const theFirstPage = this.activeIndex === 0;
+    const theLastPage = this.activeIndex === this.listings.length - 1;
     return html`
       <top-bar time="${this.time}"> </top-bar>
       <div class="alignContent">
@@ -170,19 +174,54 @@ export class TvApp extends LitElement {
         </div>
 
         <div class="main">
-          <slot> ${this.activeContent} </slot>
+           <slot>${this.activeContent}</slot>
         </div>
 
-        <div class="fabs">
-          <div id="previous">
+        <div class="clickers">
+          <div id="back" style="$theFirstPage ? 'display: none;' : ''}">
             <button @click=${() => this.prevPage()}>Back</button>
           </div>
-          <div id="next">
+          <div id="next" style="$theLastPage ? 'display: none;' : ''}">
             <button @click=${() => this.nextPage()}>Next</button>
           </div>
         </div>
       </div>
     `;
+  }
+
+  renderActiveContent(){
+    if(!this.activeContent){
+      return html``;
+    }
+
+    const filler = document.createElement('filler');
+    filler.innerHTML = this.activeContent;
+
+    return html`${filler.content}`;
+
+    }
+
+  contentLoader(){
+    const currActiveIndex = localStorage.getItem('activeIndex');
+    const currFarthestIndex = localStorage.getItem('farthestIndex');
+    if (currActiveIndex !== null && currFarthestIndex !== null){
+      this.activeIndex = parseInt(storedActiveIndex, 10);
+      this.farthestIndex = parseInt(storedFarthestIndex, 10);
+      this.loadActiveContent();
+    }
+  }
+
+  async loadInfo(){
+
+    await fetch(this.source)
+      .then((resp) => (resp.ok ? resp.json() : []))
+      .then((responseData) => {
+        if (responseData.status === 200 && responseData.data.items && responseData.data.items.length > 0) {
+          this.listings = [...responseData.data.items];
+          this.loadActiveContent();
+        }
+      })
+      .catch((error) => { console.error('Error fetching data:', error); });
   }
 
   async nextPage() {
