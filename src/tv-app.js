@@ -241,7 +241,6 @@ export class TvApp extends LitElement {
     }
   }
 
-  // function to fetch the previous content
   async prevPage() {
     if (this.activeIndex !== null) {
 
