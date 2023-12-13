@@ -31,7 +31,7 @@ export class TvApp extends LitElement {
   static get properties() {
     return {
       name: { type: String },
-      source: { type: String }, // To fetch the JSON file
+      source: { type: String }, 
       listings: { type: Array },
       selectedCourse: { type: Object },
       contents: { type: Array },
@@ -174,7 +174,7 @@ export class TvApp extends LitElement {
         </div>
 
         <div class="main">
-           <slot>${this.activeContent}</slot>
+           <slot></slot>
         </div>
 
         <div class="clickers">
@@ -190,16 +190,15 @@ export class TvApp extends LitElement {
   }
 
   renderActiveContent(){
+    const slotElement = this.shadowRoot.querySelector('slot');
+
     if(!this.activeContent){
-      return html``;
+      slotElement.innerHTML = '';
     }
 
-    const filler = document.createElement('filler');
-    filler.innerHTML = this.activeContent;
+    slotElement.innerHTML = this.activeContent;
 
-    return html`${filler.content}`;
-
-    }
+  }
 
   contentLoader(){
     const currActiveIndex = localStorage.getItem('activeIndex');
@@ -234,6 +233,7 @@ export class TvApp extends LitElement {
       try {
         const response = await fetch(contentPath);
         this.activeContent = await response.text();
+        this.renderActiveContent();
         this.activeIndex = nextIndex; 
       } catch (err) {
         console.log("fetch failed", err);
@@ -254,34 +254,35 @@ export class TvApp extends LitElement {
       try {
         const response = await fetch(contentPath);
         this.activeContent = await response.text();
-        //console.log("Active Content", this.activeContent);
-        this.activeIndex = prevIndex; // Update the active index after fetching content
+        this.renderActiveContent();
+        
+        this.activeIndex = prevIndex; 
       } catch (err) {
         console.log("fetch failed", err);
       }
     }
   }
 
-  // Funtion to fetch for the content that is being clicked
   async itemClick(index) {
     this.activeIndex = index; 
-    //console.log("Active Index: ", this.activeIndex);
+    
 
     const item = this.listings[index].location; 
-    //console.log("Active Content: ", item);
+    
 
     this.time = this.listings[index].metadata.timecode; 
-    //console.log("Time: ", this.time);
+    
 
     const contentPath = "/assets/" + item;
 
     
     try {
       const response = await fetch(contentPath);
-     //  console.log("Response: ", response);
+     
       const text = await response.text();
-     //  console.log("Text: ", text);
+     
       this.activeContent = text; 
+      this.renderActiveContent();
     } catch (err) {
       console.log("fetch failed", err);
     }

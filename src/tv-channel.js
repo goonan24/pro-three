@@ -83,7 +83,7 @@ export class TvChannel extends LitElement {
   }
 
   updated(changedProperties) {
-    // Course progression
+   
     if (changedProperties.has("activeIndex") && this.activeIndex !== null) {
       const circle = this.shadowRoot.querySelector(".circle");
       const id = this.shadowRoot.querySelector("#title");
@@ -112,7 +112,7 @@ export class TvChannel extends LitElement {
           <h2>${this.id}</h2>
         </span>
         <span id="title">${this.title}</span>
-        <slot></slot>
+        <slot> </slot>
       </div>
     `;
   }
